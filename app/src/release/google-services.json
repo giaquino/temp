@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "874021253824",
+    "firebase_url": "https://its-here-prod.firebaseio.com",
+    "project_id": "its-here-prod",
+    "storage_bucket": "its-here-prod.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874021253824:android:89bd551422690180",
+        "android_client_info": {
+          "package_name": "com.itshere"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874021253824-uc0a7o225c9ma8unvie2pv43udjf12as.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.itshere",
+            "certificate_hash": "7c11d383f8c1f552e61213b6ed66068dd62e5464"
+          }
+        },
+        {
+          "client_id": "874021253824-47puhh1vao72mclsg58tg6q9nva6ce64.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBui9jdBaNAsUzFXfb8s8ZZ6xku4Slm7D4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "874021253824-47puhh1vao72mclsg58tg6q9nva6ce64.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/tools">
+
+  <data>
+    <variable
+        name="activity"
+        type="com.itshere.ui.main.MainActivity" />
+  </data>
+
+  <android.support.v4.widget.DrawerLayout
+      android:id="@+id/main_drawer"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:fitsSystemWindows="true">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/main_coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false">
+
+      <FrameLayout
+          android:id="@+id/main_content_container"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+        <fragment
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:id="@+id/main_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?actionBarSize"
+            map:cameraZoom="13"
+            map:liteMode="true"
+            map:mapType="normal" />
+
+        <include
+            layout="@layout/view_toolbar"
+            android:id="@+id/main_toolbar" />
+
+      </FrameLayout>
+
+      <android.support.design.widget.FloatingActionButton
+          android:id="@+id/main_location"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="@dimen/_16dp"
+          android:contentDescription="@string/main_location_desc"
+          android:src="@drawable/ic_track"
+          android:theme="@style/My.ThemeOverlay.WhiteAccent"
+          android:tint="@color/dark_icon"
+          android:tintMode="src_in"
+          app:elevation="@dimen/elevation_fab"
+          app:fabSize="normal"
+          app:layout_anchor="@id/main_map"
+          app:layout_anchorGravity="bottom|end"
+          app:pressedTranslationZ="@dimen/elevation_fab_pressed"
+          app:rippleColor="@color/ripple_dark"
+          android:onClick="@{() -> activity.onLocationClick()}"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/main_navigation"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start" />
+
+  </android.support.v4.widget.DrawerLayout>
+
+</layout>

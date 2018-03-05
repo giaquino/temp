@@ -1,0 +1,86 @@
+<resources>
+
+  <style name="My.Theme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorAccent">@color/accent</item>
+    <item name="colorPrimary">@color/primary</item>
+    <item name="colorPrimaryDark">@color/primary_dark</item>
+  </style>
+
+  <style name="My.Theme.Translucent">
+    <item name="android:windowBackground">@color/scrim</item>
+    <!-- should be null if window background is translucent -->
+    <item name="android:colorBackgroundCacheHint">@null</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowIsFloating">false</item>
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:statusBarColor">@android:color/transparent</item>
+    <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+  </style>
+
+  <style name="My.ThemeOverlay.WhiteAccent" parent="ThemeOverlay.AppCompat.Light">
+    <item name="colorAccent">@android:color/white</item>
+    <item name="colorPrimary">@color/primary</item>
+    <item name="colorPrimaryDark">@color/primary_dark</item>
+  </style>
+
+  <style name="My.ThemeOverlay.AccentOnLight" parent="ThemeOverlay.AppCompat.Light">
+    <item name="colorAccent">@color/accent_on_light</item>
+    <item name="colorPrimary">@color/primary</item>
+    <item name="colorPrimaryDark">@color/primary_dark</item>
+  </style>
+
+  <style name="My.TextAppearance.Display4" parent="TextAppearance.AppCompat.Display4" />
+
+  <style name="My.TextAppearance.Display3" parent="TextAppearance.AppCompat.Display3" />
+
+  <style name="My.TextAppearance.Display2" parent="TextAppearance.AppCompat.Display2">
+    <item name="lineHeightHint">48sp</item>
+  </style>
+
+  <style name="My.TextAppearance.Display1" parent="TextAppearance.AppCompat.Display1">
+    <item name="lineHeightHint">40sp</item>
+  </style>
+
+  <style name="My.TextAppearance.Headline" parent="TextAppearance.AppCompat.Headline">
+    <item name="lineHeightHint">32sp</item>
+  </style>
+
+  <style name="My.TextAppearance.Title" parent="TextAppearance.AppCompat.Title" />
+
+  <style name="My.TextAppearance.Subhead" parent="TextAppearance.AppCompat.Subhead">
+    <item name="lineHeightHint">24sp</item>
+  </style>
+
+  <style name="My.TextAppearance.Body1" parent="TextAppearance.AppCompat.Body1">
+    <item name="lineHeightHint">20sp</item>
+  </style>
+
+  <style name="My.TextAppearance.Body2" parent="TextAppearance.AppCompat.Body2">
+    <item name="lineHeightHint">24sp</item>
+  </style>
+
+  <style name="My.TextAppearance.Button" parent="TextAppearance.AppCompat.Button">
+  </style>
+
+  <style name="My.TextAppearance.Caption" parent="TextAppearance.AppCompat.Caption" />
+
+  <style name="My.TextAppearance.Toolbar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+    <item name="android:textColor">@color/text_on_accent</item>
+  </style>
+
+  <style name="My.TextAppearance.Toolbar.Search" parent="My.TextAppearance.Toolbar.Title" />
+
+  <style name="My.Button.Colored" parent="Widget.AppCompat.Button.Colored">
+    <item name="android:textColor">@color/text_on_accent</item>
+  </style>
+
+  <style name="My.Button.Colored.Light" parent="Widget.AppCompat.Button.Colored">
+    <item name="android:textColor">@color/text_on_light_button</item>
+  </style>
+
+  <style name="My.Button.Borderless" parent="Widget.AppCompat.Button.Borderless">
+    <item name="android:textColor">@color/text_on_light_button</item>
+  </style>
+
+</resources>

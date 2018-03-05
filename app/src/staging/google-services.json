@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "299194251110",
+    "firebase_url": "https://its-here-stg.firebaseio.com",
+    "project_id": "its-here-stg",
+    "storage_bucket": "its-here-stg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:299194251110:android:b88161421ecba31e",
+        "android_client_info": {
+          "package_name": "com.itshere.staging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "299194251110-v8f7faeg8rndvjiv4t6vu1la8rg7cajr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.itshere.staging",
+            "certificate_hash": "efe60aebb976195a5357e14fe289cec0d1ff56d3"
+          }
+        },
+        {
+          "client_id": "299194251110-32ha0ehvndlb0mksb694k3eks6h4ve6e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdF-nVo4n7QPJwQvk7N6KkJ8-xak0LoTU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "299194251110-32ha0ehvndlb0mksb694k3eks6h4ve6e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

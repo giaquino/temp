@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <data>
+    <import type="android.view.View" />
+    <variable
+        name="activity"
+        type="com.itshere.ui.login.LoginActivity" />
+    <variable
+        name="vm"
+        type="com.itshere.ui.login.LoginViewModel" />
+  </data>
+
+  <FrameLayout
+      android:id="@+id/login_root"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:onClick="@{() -> activity.dismiss()}">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/login_card"
+        android:layout_width="@dimen/login_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardCornerRadius="@dimen/cardview_default_radius"
+        app:cardElevation="@dimen/elevation_dialog">
+
+      <android.support.constraint.ConstraintLayout
+          android:id="@+id/login_content"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:animate_visibility="@{!vm.isLoading()}">
+
+        <com.itshere.common.widget.BaselineGridTextView
+            android:id="@+id/login_title"
+            android:layout_width="0dp"
+            android:layout_marginBottom="@dimen/padding_dialog_between_title"
+            android:layout_marginEnd="@dimen/padding_dialog_around"
+            android:layout_marginStart="@dimen/padding_dialog_around"
+            android:layout_marginTop="@dimen/padding_dialog_around"
+            android:layout_height="wrap_content"
+            android:text="@string/login_title"
+            android:textAppearance="@style/My.TextAppearance.Title"
+            app:layout_constraintBottom_toTopOf="@+id/login_body"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.itshere.common.widget.BaselineGridTextView
+            android:id="@+id/login_body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_dialog_around"
+            android:layout_marginEnd="@dimen/padding_dialog_around"
+            android:layout_marginStart="@dimen/padding_dialog_around"
+            android:text="@string/login_body"
+            android:textAppearance="@style/My.TextAppearance.Subhead"
+            android:textColor="?android:textColorTertiary"
+            app:layout_constraintBottom_toTopOf="@+id/login_sign_in"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_title"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/login_sign_in"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/padding_dialog_around_less_4dp"
+            android:layout_marginStart="@dimen/padding_dialog_around_less_4dp"
+            android:layout_marginTop="@dimen/inset_button_horizontal"
+            android:background="@drawable/common_google_signin_btn_text_dark"
+            android:backgroundTint="@color/common_google_signin_btn_tint"
+            android:backgroundTintMode="src_atop"
+            android:onClick="@{() -> activity.login()}"
+            android:stateListAnimator="@null"
+            android:text="@string/login_google"
+            android:textColor="@color/common_google_signin_btn_text_dark"
+            app:layout_constraintBottom_toTopOf="@+id/login_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_body"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/login_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_dialog_around_button"
+            android:layout_marginEnd="@dimen/padding_dialog_around_less_4dp"
+            android:layout_marginStart="@dimen/padding_dialog_around_less_4dp"
+            android:onClick="@{() -> activity.dismiss()}"
+            android:text="@string/login_cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_sign_in"
+            app:layout_constraintVertical_chainStyle="packed"
+            style="@style/My.Button.Borderless" />
+
+      </android.support.constraint.ConstraintLayout>
+
+      <FrameLayout
+          android:id="@+id/loading_content"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:padding="@dimen/padding_dialog_around"
+          android:animate_visibility="@{vm.isLoading()}">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:theme="@style/My.ThemeOverlay.AccentOnLight"
+            style="@style/Widget.AppCompat.ProgressBar" />
+
+      </FrameLayout>
+
+    </android.support.v7.widget.CardView>
+
+  </FrameLayout>
+
+</layout>

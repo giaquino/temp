@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Search layout that is just a static to mimic the original layout -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <android.support.constraint.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:fitsSystemWindows="true">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/search_height"
+        android:layout_marginBottom="@dimen/search_margin"
+        android:layout_marginEnd="@dimen/search_margin"
+        android:layout_marginStart="@dimen/search_margin"
+        android:layout_marginTop="@dimen/search_margin"
+        app:cardCornerRadius="@dimen/search_corner_radius"
+        app:cardElevation="@dimen/search_elevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/search_menu"
+            android:layout_width="?actionBarSize"
+            android:layout_height="@dimen/search_height"
+            android:background="?selectableItemBackground"
+            android:contentDescription="@string/search_menu_desc"
+            android:scaleType="center"
+            android:src="@drawable/ic_menu"
+            android:tint="@color/dark_icon"
+            android:tintMode="src_in" />
+
+        <TextView
+            android:id="@+id/search_hint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_weight="1"
+            android:text="@string/search_hint"
+            android:textAppearance="@style/My.TextAppearance.Toolbar.Search"
+            android:textColor="?android:textColorHint" />
+
+        <ImageView
+            android:id="@+id/search_voice"
+            android:layout_width="?actionBarSize"
+            android:layout_height="@dimen/search_height"
+            android:background="?selectableItemBackground"
+            android:contentDescription="@string/search_voice_desc"
+            android:scaleType="center"
+            android:src="@drawable/ic_voice"
+            android:tint="@color/dark_icon"
+            android:tintMode="src_in" />
+      </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+  </android.support.constraint.ConstraintLayout>
+
+</layout>
